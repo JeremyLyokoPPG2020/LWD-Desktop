@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title>JS98 example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+ <div id="os">
+      <div id="desktop"></div>
+      <div id="windows"></div>
+      <div id="taskbar">
+        <div id="tray">
+          <img
+            draggable="false"
+            style="float: left; margin-top: 1.5px; margin-left: 3px"
+            src="system-files/img/computertjes.png"
+          />
+          <span id="time"></span>
+        </div>
+        <div id="dock"></div>
+      </div>
+      <div id="contextmenu"></div>
+      <canvas id="ctx"></canvas>
+    </div>
+	
+  <script src="98.js"></script>
+
+  <script>
+      //your code here
+	  var desktop = new JS98.Desktop();
+	  var icon = new JS98.Icon();
+icon.title = "Insert title here";
+desktop.Add(icon);
+  </script>
+</body>
+
+</html>
