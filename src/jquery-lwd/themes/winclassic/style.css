@@ -1,5 +1,5 @@
-html, body{
-font-family: Tahoma, Geneva, sans-serif;
-    font-size: 12px;
-}   
-   
+html, body{font-family: Tahoma, Geneva, sans-serif;font-size: 12px;}   
+.ui-dialog .ui-resizable-n {height: 4px;top: 0;}
+.ui-dialog .ui-resizable-e {width: 4px;right: 0;}
+.ui-dialog .ui-resizable-s {height: 4px;bottom: 0;}
+.ui-dialog .ui-resizable-w {width: 4px;left: 0;}

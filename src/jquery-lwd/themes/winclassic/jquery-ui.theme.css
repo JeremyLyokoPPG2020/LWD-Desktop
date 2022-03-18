@@ -1,4 +1,4 @@
-@import url("../winclassic/style.css");
+@import url("style.css");
 html, body {
     background: #3a6ea5;
     -webkit-background-size: cover;
@@ -98,7 +98,7 @@ button::-moz-focus-inner /*Remove button padding in FF*/
 	/* margin: 3px; */
     padding: 1px 0 1px 2px !important;
     line-height: 16px;
-    height: 17px;
+    height: 16px;
     cursor: pointer;
     font-weight: bold;
     background: #818084; /* Old browsers */
@@ -137,6 +137,12 @@ td.titlebar-middle {
     padding: 0 0 0 2px !important;
     overflow: hidden;
     line-height: 18px !important;
+	width: calc(100% - 60px);
+	text-overflow: ellipsis;
+    white-space: nowrap;
+	min-width: 0;
+    max-width: 100%;
+	display: inline-block;
 }
 
 div.lwd-window-focus td.titlebar-middle {
@@ -154,11 +160,14 @@ td.titlebar-left{
 
 td.titlebar-right{
     height: 100%;
-    min-width: 18px;
+    min-width: 60px;
     text-align: right;
     vertical-align: middle;
     max-width: 60px;
     width: 60px;
+	position: absolute;
+    right: 0;
+    top: 0;
 }
 
 
@@ -258,6 +267,11 @@ div#lwd-taskbar-button-container > button:active, div#lwd-taskbar-button-contain
     font-size: 12px !important;
     line-height: 19px;
     height: 17px;
+	display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 130px;
 }
 
 .lwd-window-titlebar-button {
