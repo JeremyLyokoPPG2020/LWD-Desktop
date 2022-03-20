@@ -36,7 +36,7 @@
             var intCounter = 1;
 
             $('#addbutton').click(function () {
-                var $objWindow = $('<div class="window">Window '+intCounter+'</div>');
+                var $objWindow = $('<div class="window"><div class="fit-conte">Window '+intCounter+'</div></div>');
                 var intRandom = Math.floor((Math.random() * 12) + 1);
                 $($objWindow).appendTo('body');
                 $objWindow.window({
@@ -67,7 +67,26 @@
 		
 		function thisds(){
 		
-		                var $objWindow = $('<div class="window">fwefe</div>');
+		                var $objWindow = $('<div class="window"><div class="fit-conte">dkadaksdjsa</div></div>');
+                $($objWindow).appendTo('body');
+                $objWindow.window({
+                    title: 'My awesome custom wi',
+                    width: 480,
+                    height: 320,
+                    position: {
+                        my: 'left+'+200+', top+'+200,
+                        at: 'left top',
+                        of: window
+                    },
+                    maximizable: true,
+                    minimizable: true,
+icon: 'src/jquery-lwd/themes/windows2000/images/default.png'
+                });
+		
+		};
+		function openTunes(){
+		
+		                var $objWindow = $('<div class="window"><iframe class="fit-iframe" src="programs/tunes/index.html"></iframe></div>');
                 $($objWindow).appendTo('body');
                 $objWindow.window({
                     title: 'My awesome custom wi',

@@ -84,13 +84,16 @@ button::-moz-focus-inner /*Remove button padding in FF*/
 .ui-dialog.ui-draggable-disabled.ui-resizable-disabled {
     box-shadow: none;
     width: 100%!important;
-	height: -moz-calc(100% - 34px)!important;
-	height: -webkit-calc(100% - 34px)!important;
-	height: calc(100% - 34px)!important;
+	height: -moz-calc(100% - 30px)!important;
+	height: -webkit-calc(100% - 30px)!important;
+	height: calc(100% - 30px)!important;
 }
 
 .ui-draggable-disabled.ui-resizable-disabled .ui-dialog-content{
-	height: calc(100% - 34px)!important;
+	width: 100%!important;
+	height: -moz-calc(100% - 20px)!important;
+	height: -webkit-calc(100% - 20px)!important;
+	height: calc(100% - 20px)!important;
 }
 
 .ui-dialog-titlebar {
@@ -132,17 +135,22 @@ td.titlebar-middle {
     height: 100%;
     color: #E9E7E5;
     text-align: left !important;
-    vertical-align: middle;
-    font-weight: bold;
     padding: 0 0 0 2px !important;
     overflow: hidden;
-    line-height: 18px !important;
+    line-height: 16px !important;
+	width: -moz-calc(100% - 60px);
+	width: -webkit-calc(100% - 60px);
 	width: calc(100% - 60px);
 	text-overflow: ellipsis;
     white-space: nowrap;
 	min-width: 0;
     max-width: 100%;
 	display: inline-block;
+	font-size: 16px;
+    font-weight: normal;
+	text-shadow: -1px 0;
+    letter-spacing: 1px;
+    vertical-align: top;
 }
 
 div.lwd-window-focus td.titlebar-middle {
@@ -167,7 +175,7 @@ td.titlebar-right{
     width: 60px;
 	position: absolute;
     right: 0;
-    top: 0;
+    top: 1px;
 }
 
 
@@ -177,7 +185,8 @@ div#taskbar {
     bottom: 0;
     overflow: hidden;
     width: 100%;
-    height: 28px;
+	min-height: 27px!important;
+    height: 27px;
     border-top: #fffff9 solid 2px;
     z-index: 99999;
     padding: 1px !important;
@@ -192,10 +201,11 @@ div#taskbar button {
     min-width: 70px;
     padding: 1px 5px 2px 3px;
     margin: 2px 2px 2px 2px !important;
-    border-top: #f8f7f6 solid 2px;
+	/* border-top: #f8f7f6 solid 2px;
     border-left: #f8f7f6 solid 2px;
     border-bottom: #3d3e40 solid 2px;
-    border-right: #3d3e40 solid 2px;
+    border-right: #3d3e40 solid 2px; */
+	border: none;
     font-weight: normal !important;
 }
 
@@ -203,10 +213,11 @@ div#taskbar button:active, div#taskbar>button.lwd-taskbar-button-focus {
     margin: 2px 2px 2px 2px !important;
     padding: 2px 5px 2px 3px !important;
     background-color: #e9e7e5 !important;
-    border-top: #3d3e40 solid 2px !important;
+/* 	border-top: #3d3e40 solid 2px !important;
     border-left: #3d3e40 solid 2px !important;
     border-bottom: #f8f7f6 solid 2px !important;
-    border-right: #f8f7f6 solid 2px !important;
+    border-right: #f8f7f6 solid 2px !important; */
+	border: none;
     outline: none;
 }
 
@@ -217,7 +228,7 @@ div#lwd-taskbar-information_container {
 }
 
 div#lwd-taskbar-button-container {
-    max-height: 30px;
+    max-height: 28px;
     overflow-x: hidden;
     overflow-y: hidden;
 }
@@ -227,25 +238,31 @@ div#lwd-taskbar-button-container > button, div#taskbar>button {
     float: left;
     cursor: pointer;
     background-color: #d4d0c8;
-    height: 26px;
+    height: 24px;
     min-width: 70px;
     padding: 1px 5px 2px 3px;
     margin: 2px 2px 2px 2px !important;
-    border-top: #f8f7f6 solid 2px;
+   /*  border-top: #f8f7f6 solid 2px;
     border-left: #f8f7f6 solid 2px;
     border-bottom: #3d3e40 solid 2px;
-    border-right: #3d3e40 solid 2px;
+    border-right: #3d3e40 solid 2px; */
+	border: none;
     font-weight: normal !important;
+	background-image: url(images/open_button.png)!important;
+    background-position: 0px -3px;
+	width: 162px;
 }
 
 div#lwd-taskbar-button-container > button:active, div#lwd-taskbar-button-container > button.lwd-taskbar-button-focus, div#taskbar>button:active, div#taskbar>button.lwd-taskbar-button-focus, div#lwd-taskbar-button-container > button.ui-state-hover  {
     margin: 2px 2px 2px 2px !important;
     padding: 2px 5px 2px 3px !important;
     background-color: #e9e7e5 !important;
-    border-top: #3d3e40 solid 2px !important;
+/*     border-top: #3d3e40 solid 2px !important;
     border-left: #3d3e40 solid 2px !important;
     border-bottom: #f8f7f6 solid 2px !important;
-    border-right: #f8f7f6 solid 2px !important;
+    border-right: #f8f7f6 solid 2px !important; */
+	border: none;
+	background-position: 0px -57px;
     outline: none;
 }
 
@@ -304,7 +321,8 @@ div#lwd-taskbar-button-container > button:active, div#lwd-taskbar-button-contain
 }
 
 .ui-dialog-content {
-    padding: 2px !important;
+    margin: 1px 0 !important;
+    padding: 0px !important;
 }
 
 .lwd-window-icon {

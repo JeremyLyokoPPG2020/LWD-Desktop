@@ -1,5 +1,32 @@
-html, body{font-family: Tahoma, Geneva, sans-serif;font-size: 12px;}   
+html, body{font-family: "TahomaPX", Tahoma, Geneva, sans-serif;font-size: 16px;}   
+@font-face {
+  font-family: TahomaPX;
+  src: url(fonts/fs-tahoma-8px.ttf);
+}
+@font-face {
+  font-family: TahomaPX;
+  src: url(fonts/fs-tahoma-8px.ttf);
+  text-shadow: -1px 0;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
 .ui-dialog .ui-resizable-n {height: 4px;top: 0;}
 .ui-dialog .ui-resizable-e {width: 4px;right: 0;}
 .ui-dialog .ui-resizable-s {height: 4px;bottom: 0;}
 .ui-dialog .ui-resizable-w {width: 4px;left: 0;}
+.ui-dialog .ui-dialog-content{
+	overflow:hidden;width:100%!important;
+	/* height: -webkit-calc(100% - 20px)!important;
+	height: -moz-calc(100% - 20px)!important;
+	height: calc(100% - 20px)!important; */
+}
+iframe.fit-iframe {
+	width: 100%;
+    height: 100%;
+    border: none;
+}
+.ui-widget-content div.fit-conte{
+	width: 100%;
+    height: 100%;
+	padding: 1px 2px 0;
+}
