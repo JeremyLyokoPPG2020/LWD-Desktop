@@ -175,7 +175,9 @@ td.titlebar-right{
     width: 60px;
 	position: absolute;
     right: 0;
-    top: 1px;
+    top: 0;
+	margin-top: 1px!important;
+	line-height: 0px;
 }
 
 
@@ -187,9 +189,12 @@ div#taskbar {
     width: 100%;
 	min-height: 27px!important;
     height: 27px;
-    border-top: #fffff9 solid 2px;
+    border-top: #FFFFFF solid 1px;
+	-webkit-box-shadow: 0px -1px 0px 0px #D6D6CE;
+	-moz-box-shadow: 0px -1px 0px 0px #D6D6CE;
+	box-shadow: 0px -1px 0px 0px #D6D6CE;
     z-index: 99999;
-    padding: 1px !important;
+    padding: 0 !important;
 }
 
 div#taskbar button {
@@ -197,26 +202,19 @@ div#taskbar button {
     float: left;
     cursor: pointer;
     background-color: #d4d0c8;
-    height: 26px;
+    height: 20px;
     min-width: 70px;
     padding: 1px 5px 2px 3px;
-    margin: 2px 2px 2px 2px !important;
-	/* border-top: #f8f7f6 solid 2px;
-    border-left: #f8f7f6 solid 2px;
-    border-bottom: #3d3e40 solid 2px;
-    border-right: #3d3e40 solid 2px; */
+    margin: 0 !important;
 	border: none;
+    font-family: 'TahomaPX', Tahoma, Geneva, sans-serif;
     font-weight: normal !important;
+    font-size: 16px !important;
 }
 
 div#taskbar button:active, div#taskbar>button.lwd-taskbar-button-focus {
-    margin: 2px 2px 2px 2px !important;
     padding: 2px 5px 2px 3px !important;
     background-color: #e9e7e5 !important;
-/* 	border-top: #3d3e40 solid 2px !important;
-    border-left: #3d3e40 solid 2px !important;
-    border-bottom: #f8f7f6 solid 2px !important;
-    border-right: #f8f7f6 solid 2px !important; */
 	border: none;
     outline: none;
 }
@@ -231,9 +229,12 @@ div#lwd-taskbar-button-container {
     max-height: 28px;
     overflow-x: hidden;
     overflow-y: hidden;
+	margin-top: 0;
 }
 
-div#lwd-taskbar-button-container > button, div#taskbar>button {
+/*taskbar container*/
+
+div#lwd-taskbar-button-container > button{
     display: block;
     float: left;
     cursor: pointer;
@@ -241,11 +242,7 @@ div#lwd-taskbar-button-container > button, div#taskbar>button {
     height: 24px;
     min-width: 70px;
     padding: 1px 5px 2px 3px;
-    margin: 2px 2px 2px 2px !important;
-   /*  border-top: #f8f7f6 solid 2px;
-    border-left: #f8f7f6 solid 2px;
-    border-bottom: #3d3e40 solid 2px;
-    border-right: #3d3e40 solid 2px; */
+    margin: 2px 0px 2px 1px !important;
 	border: none;
     font-weight: normal !important;
 	background-image: url(images/open_button.png)!important;
@@ -253,14 +250,8 @@ div#lwd-taskbar-button-container > button, div#taskbar>button {
 	width: 162px;
 }
 
-div#lwd-taskbar-button-container > button:active, div#lwd-taskbar-button-container > button.lwd-taskbar-button-focus, div#taskbar>button:active, div#taskbar>button.lwd-taskbar-button-focus, div#lwd-taskbar-button-container > button.ui-state-hover  {
-    margin: 2px 2px 2px 2px !important;
-    padding: 2px 5px 2px 3px !important;
+div#lwd-taskbar-button-container > button:active, div#lwd-taskbar-button-container > button.lwd-taskbar-button-focus, div#lwd-taskbar-button-container > button.ui-state-hover  {
     background-color: #e9e7e5 !important;
-/*     border-top: #3d3e40 solid 2px !important;
-    border-left: #3d3e40 solid 2px !important;
-    border-bottom: #f8f7f6 solid 2px !important;
-    border-right: #f8f7f6 solid 2px !important; */
 	border: none;
 	background-position: 0px -57px;
     outline: none;
@@ -280,9 +271,10 @@ div#lwd-taskbar-button-container > button:active, div#lwd-taskbar-button-contain
 .lwd-taskbar-button-title {
     margin: 2px 0 0 2px !important;
     padding: 0 0 0 2px;
+	font-family: 'TahomaPX', Tahoma, Geneva, sans-serif;
     font-weight: normal !important;
-    font-size: 12px !important;
-    line-height: 19px;
+    font-size: 16px !important;
+    line-height: 16px;
     height: 17px;
 	display: inline-block;
     overflow: hidden;
@@ -374,10 +366,10 @@ td.taskbar-right {
     display: block;
     float:right;
     margin: 0;
-    border-top: #3d3e40 solid 2px !important;
-    border-left: #3d3e40 solid 2px !important;
-    border-bottom: #f8f7f6 solid 2px !important;
-    border-right: #f8f7f6 solid 2px !important;
+    border-top: #3d3e40 solid 1px !important;
+    border-left: #3d3e40 solid 1px !important;
+    border-bottom: #f8f7f6 solid 1px !important;
+    border-right: #f8f7f6 solid 1px !important;
     padding: 0 4px 0 4px;
 }
 
@@ -387,12 +379,9 @@ td.taskbar-right {
 
 #lwd-taskbar-clock {
     float: right;
-    height: 20px;
-    border-radius: 4px;
-    padding: 4px 0 0 0;
-    margin: 2px 5px 0 5px;
+    height: 16px;
+    border-radius: 0;
 }
-
 
 #lwd-taskbar-info {
     display: inline-block;
@@ -413,7 +402,7 @@ td.taskbar-right {
 #lwd-taskbar-button-navigation{
     display: none;
     float: left;
-    margin: 2px 0 0 0;
+    margin: 0;
     padding: 0 4px 0 0;
 }
 
@@ -447,7 +436,7 @@ div#lwd-taskbar-nav-down:active {
 
 .taskbar-spacer {
     display: inline-block;
-    height: 25px;
+    height: 13px;
     width: 1px;
     border-left: 1px solid #818084;
     border-right: 1px solid #fffff9;

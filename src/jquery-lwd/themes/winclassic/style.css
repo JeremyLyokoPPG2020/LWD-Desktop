@@ -1,10 +1,12 @@
 html, body{font-family: "TahomaPX", Tahoma, Geneva, sans-serif;font-size: 16px;}   
 @font-face {
   font-family: TahomaPX;
+  src: url(fonts/fs-tahoma-8px.woff2);
   src: url(fonts/fs-tahoma-8px.ttf);
 }
 @font-face {
   font-family: TahomaPX;
+  src: url(fonts/fs-tahoma-8px.woff2);
   src: url(fonts/fs-tahoma-8px.ttf);
   text-shadow: -1px 0;
   letter-spacing: 1px;
