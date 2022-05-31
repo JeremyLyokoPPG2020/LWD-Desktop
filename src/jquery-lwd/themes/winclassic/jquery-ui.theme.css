@@ -203,9 +203,9 @@ div#taskbar button {
     cursor: pointer;
     background-color: #d4d0c8;
     height: 20px;
-    min-width: 70px;
+    min-width: 0;
     padding: 1px 5px 2px 3px;
-    margin: 0 !important;
+    /* margin: 0 !important; */
 	border: none;
     font-family: 'TahomaPX', Tahoma, Geneva, sans-serif;
     font-weight: normal !important;
@@ -222,7 +222,10 @@ div#taskbar button:active, div#taskbar>button.lwd-taskbar-button-focus {
 
 
 div#lwd-taskbar-information_container {
-    display: inline-block;
+   display: inline-block;
+    height: 14px;
+    margin: 2px;
+    padding: 3px;
 }
 
 div#lwd-taskbar-button-container {

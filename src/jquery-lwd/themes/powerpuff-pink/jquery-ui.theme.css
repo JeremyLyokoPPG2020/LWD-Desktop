@@ -1,0 +1,13 @@
+@import url("../winclassic/jquery-ui.theme.css"); /* Using a url */
+html, body {
+	background: #0080ff;
+}
+div.lwd-window-focus .ui-dialog-titlebar {
+    background: #ff0080;
+    background: -moz-linear-gradient(left, #ff0080 0%, #e800e8 100%) !important;
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ff0080), color-stop(100%,#e800e8)) !important;
+    background: -webkit-linear-gradient(left, #ff0080 0%,#e800e8 100%) !important;
+    background: -o-linear-gradient(left, #ff0080 0%,#e800e8 100%) !important;
+    background: -ms-linear-gradient(left, #ff0080 0%,#e800e8 100%) !important;
+    background: linear-gradient(to right, #ff0080 0%,#e800e8 100%) !important;
+}

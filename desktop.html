@@ -2,22 +2,35 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        <title>Test</title>
+        <title>LWD Desktop</title>
 
         <link href="lib/jquery-ui/jquery-ui.structure.min.css" rel="stylesheet" type="text/css" />
         <link id="themecss" href="src/jquery-lwd/themes/windows2000/jquery-ui.theme.css" rel="stylesheet" type="text/css" />
         <link href="src/jquery-lwd/jquery-lwd.structure.css" rel="stylesheet" type="text/css" />
+		
 
         <script type="text/javascript" src="lib/jquery-ui/jquery.min.js"></script>
         <script type="text/javascript" src="lib/jquery-ui/jquery-ui.min.js"></script>
         <script type="text/javascript" src="src/jquery-lwd/jquery-lwd.js"></script>
+        <script type="text/javascript" src="lib/jquery.ui.touch-punch.min.js"></script>
     </head>
 
     <body>
+	
+			<div id="startmenu" class="startmenu" style="display:none;">
+				<ul>
+					<li id="newYoutubeWindowButton" OnClick="alert('Alert')">Alert</li>
+					<li id="newHtmlWindowButton" OnClick="thisds()">Open1</li>
+					<li id="newWindowButton" OnClick="openTunes()">Open2</li>
+				</ul>
+			</div>
         <div id="taskbar">
             <div id="lwd-taskbar-left" style="display: inline-block">
-                <button id="addbutton" class="ui-button lwd-taskbar-button ui-state-default ui-corner-all">Add window</button>
-                <div class="taskbar-spacer"></div>
+			
+			<button id="startbutton" class="wind-button ui-button lwd-taskbar-button ui-state-default ui-corner-all">Start</button>
+                <button id="addbutton" class="wind-button ui-button lwd-taskbar-button ui-state-default ui-corner-all">Add window</button>
+                
+				<div class="taskbar-spacer"></div>
             </div>
         </div>
 
@@ -25,6 +38,7 @@
         <select id="theme">
             <option value="">--- please choose</option>
             <option value="src/jquery-lwd/themes/windows2000/jquery-ui.theme.css">Windows 2000</option>
+			<option value="src/jquery-lwd/themes/powerpuff-pink/jquery-ui.theme.css">The PPG</option>
             <option value="src/jquery-lwd/themes/material/jquery-ui.theme.css">Material</option>
             <option value="src/jquery-lwd/themes/pink-vista/jquery-ui.theme.css">Vista PPG</option>
             <option value="src/jquery-lwd/themes/jquery-ui-base/jquery-ui.theme.css">unknown</option>
@@ -90,7 +104,7 @@ function openTunes() {
   $objWindow.window({
     title: 'My awesome custom wi',
     width: 480,
-    height: 320,
+    height: 200,
     position: {
       my: 'left+' + 200 + ', top+' + 200,
       at: 'left top',
@@ -102,6 +116,32 @@ function openTunes() {
   });
 
 };
+
+$('#startbutton').on('click',function(){
+	var strtm1 = document.getElementById("startmenu");
+  if (strtm1.style.display === "block") {
+    strtm1.style.display = "none";
+  } else {
+    strtm1.style.display = "block";
+  }
+});
+$('.startmenu li').on('click',function(){
+		$('.startmenu').css({
+			"display":"none"
+});
+});
     </script>
+	<style>
+	.startmenu{
+	position: absolute;
+    bottom: 29px;
+    background-color: white;
+    padding: 5px;
+	}
+	.startmenu li:hover{
+	background: blue;
+	color: white;
+	}
+	</style>
 
 </html>
