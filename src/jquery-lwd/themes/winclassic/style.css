@@ -1,78 +1,116 @@
 :root {
-    --ActiveBorder: rgb(212,208,200);
-    --ActiveTitle: rgb( 10, 36,106);
-    --AppWorkspace: rgb(128,128,128);
-    --Background: rgb( 58,110,165);
-    --ButtonAlternateFace: rgb(192,192,192);
+    --ActiveBorder: rgb(212, 208, 200);
+    --ActiveTitle: rgb( 10, 36, 106);
+    --AppWorkspace: rgb(128, 128, 128);
+    --Background: rgb( 58, 110, 165);
+    --ButtonAlternateFace: rgb(192, 192, 192);
     --ButtonDkShadow: rgb( 64, 64, 64);
-    --ButtonFace: rgb(212,208,200);
-    --ButtonHilight: rgb(255,255,255);
-    --ButtonLight: rgb(212,208,200);
-    --ButtonShadow: rgb(128,128,128);
+    --ButtonFace: rgb(212, 208, 200);
+    --ButtonHilight: rgb(255, 255, 255);
+    --ButtonLight: rgb(212, 208, 200);
+    --ButtonShadow: rgb(128, 128, 128);
     --ButtonText: rgb( 0, 0, 0);
-    --GradientActiveTitle: rgb(166,202,240);
-    --GradientInactiveTitle: rgb(192,192,192);
-    --GrayText: rgb(128,128,128);
-    --Hilight: rgb( 10, 36,106);
-    --HilightText: rgb(255,255,255);
-    --HotTrackingColor: rgb( 0, 0,128);
-    --InactiveBorder: rgb(212,208,200);
-    --InactiveTitle: rgb(128,128,128);
-    --InactiveTitleText: rgb(212,208,200);
+    --GradientActiveTitle: rgb(166, 202, 240);
+    --GradientInactiveTitle: rgb(192, 192, 192);
+    --GrayText: rgb(128, 128, 128);
+    --Hilight: rgb( 10, 36, 106);
+    --HilightText: rgb(255, 255, 255);
+    --HotTrackingColor: rgb( 0, 0, 128);
+    --InactiveBorder: rgb(212, 208, 200);
+    --InactiveTitle: rgb(128, 128, 128);
+    --InactiveTitleText: rgb(212, 208, 200);
     --InfoText: rgb( 0, 0, 0);
-    --InfoWindow: rgb(255,255,225);
-    --Menu: rgb(212,208,200);
-    --MenuBar: rgb(192,192,192);
-    --MenuHilight: rgb( 0, 0,128);
+    --InfoWindow: rgb(255, 255, 225);
+    --Menu: rgb(212, 208, 200);
+    --MenuBar: rgb(192, 192, 192);
+    --MenuHilight: rgb( 0, 0, 128);
     --MenuText: rgb( 0, 0, 0);
-    --Scrollbar: rgb(212,208,200);
-    --TitleText: rgb(255,255,255);
-    --Window: rgb(255,255,255);
+    --Scrollbar: rgb(212, 208, 200);
+    --TitleText: rgb(255, 255, 255);
+    --Window: rgb(255, 255, 255);
     --WindowFrame: rgb( 0, 0, 0);
     --WindowText: rgb( 0, 0, 0);
 }
-html, body{font-family: "TahomaPX", Tahoma, Geneva, sans-serif;font-size: 16px;}   
-@font-face {
-  font-family: TahomaPX;
-  src: url(fonts/fs-tahoma-8px.woff2);
-  src: url(fonts/fs-tahoma-8px.ttf);
+
+html,
+body {
+    height: 100%;
 }
-@font-face {
-  font-family: TahomaPX;
-  src: url(fonts/fs-tahoma-8px.woff2);
-  src: url(fonts/fs-tahoma-8px.ttf);
-  text-shadow: -1px 0;
-  letter-spacing: 1px;
-  font-weight: bold;
+
+.screen-env {
+    font-family: "TahomaPX", Tahoma, Geneva, sans-serif;
+    font-size: 16px;
 }
-.ui-dialog .ui-resizable-n {height: 4px;top: 0;}
-.ui-dialog .ui-resizable-e {width: 4px;right: 0;}
-.ui-dialog .ui-resizable-s {height: 4px;bottom: 0;}
-.ui-dialog .ui-resizable-w {width: 4px;left: 0;}
-.ui-dialog .ui-dialog-content{
-	overflow:hidden;width:100%!important;
-	/* height: -webkit-calc(100% - 20px)!important;
+
+@font-face {
+    font-family: TahomaPX;
+    src: url(fonts/fs-tahoma-8px.woff2);
+    src: url(fonts/fs-tahoma-8px.ttf);
+}
+
+@font-face {
+    font-family: TahomaPX;
+    src: url(fonts/fs-tahoma-8px.woff2);
+    src: url(fonts/fs-tahoma-8px.ttf);
+    text-shadow: -1px 0;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.ui-dialog-titlebar {
+    font-family: "TahomaPX", Tahoma, Geneva, sans-serif;
+}
+
+.ui-dialog .ui-resizable-n {
+    height: 4px;
+    top: 0;
+}
+
+.ui-dialog .ui-resizable-e {
+    width: 4px;
+    right: 0;
+}
+
+.ui-dialog .ui-resizable-s {
+    height: 4px;
+    bottom: 0;
+}
+
+.ui-dialog .ui-resizable-w {
+    width: 4px;
+    left: 0;
+}
+
+.ui-dialog .ui-dialog-content {
+    overflow: hidden;
+    width: 100%!important;
+    /* height: -webkit-calc(100% - 20px)!important;
 	height: -moz-calc(100% - 20px)!important;
 	height: calc(100% - 20px)!important; */
 }
+
 iframe.fit-iframe {
-	width: 100%;
+    width: 100%;
     height: 100%;
     border: none;
 }
-.ui-widget-content div.fit-conte{
-	width: 100%;
+
+.ui-widget-content div.fit-conte {
+    width: 100%;
     height: 100%;
-	padding: 1px 2px 0;
+    padding: 1px 2px 0;
 }
-.wind-button{
-	background-color: var(--ButtonFace);
+
+.wind-button {
+    background-color: var(--ButtonFace);
     color: var(--ButtonText);
     box-shadow: -0.5px -0.5px 0px 0.5px var(--ButtonLight), 0px 0px 0px 1px var(--ButtonShadow), -0.5px -0.5px 0px 1.5px var(--ButtonHilight), 0px 0px 0px 2px var(--ButtonDkShadow);
 }
+
 .wind-button:active {
     box-shadow: -0.5px -0.5px 0px 0.5px var(--ButtonShadow), 0px 0px 0px 1px var(--ButtonLight), -0.5px -0.5px 0px 1.5px var(--ButtonDkShadow), 0px 0px 0px 2px var(--ButtonHilight);
 }
-.wind-button.lwd-taskbar-button{
-margin: 4px !important;
+
+.wind-button.lwd-taskbar-button {
+    margin: 4px !important;
 }

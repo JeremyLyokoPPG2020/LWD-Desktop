@@ -1,67 +1,80 @@
 @import url("style.css");
-html, body {
-    background: #3a6ea5;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+html,
+body {
     overflow: hidden;
     margin: 0;
     padding: 0;
+    outline: 0 !important;
+    outline: none !important;
     -webkit-user-select: none;
     -moz-user-select: -moz-none;
     -ms-user-select: none;
     user-select: none;
 }
 
-* {
-    outline: 0 !important;
-    outline: none !important;
-    margin: 0;
-    padding: 0;
+.screen-env {
+    background: #3a6ea5;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%
 }
 
-input::-moz-focus-inner /*Remove button padding in FF*/
+input::-moz-focus-inner
+/*Remove button padding in FF*/
+
 {
     border: 0 !important;
     padding: 0 !important;
 }
 
-button::-moz-focus-inner /*Remove button padding in FF*/
+button::-moz-focus-inner
+/*Remove button padding in FF*/
+
 {
     border: 0 !important;
     padding: 0 !important;
     padding-top: -2px !important;
 }
 
+
 /* states and images */
+
 .ui-icon {
     width: 16px;
     height: 16px;
 }
+
 .ui-icon,
 .ui-widget-content .ui-icon {
     background-image: url("images/ui-icons_inactive.png");
 }
+
 .ui-widget-header .ui-icon {
     background-image: url("images/ui-icons_inactive.png");
 }
-.ui-state-active .ui-icon,
-.ui-button:active .ui-icon{
-    background-image: url("images/ui-icons_active.png");
-}
+
 .ui-state-active .ui-icon,
 .ui-button:active .ui-icon {
     background-image: url("images/ui-icons_active.png");
 }
+
+.ui-state-active .ui-icon,
+.ui-button:active .ui-icon {
+    background-image: url("images/ui-icons_active.png");
+}
+
 .ui-state-highlight .ui-icon,
 .ui-button .ui-state-highlight.ui-icon {
     background-image: url("images/ui-icons_inactive.png");
 }
+
 .ui-state-error .ui-icon,
 .ui-state-error-text .ui-icon {
     background-image: url("images/ui-icons_inactive.png");
 }
+
 .ui-button .ui-icon {
     background-image: url("images/ui-icons_inactive.png");
 }
@@ -78,49 +91,63 @@ button::-moz-focus-inner /*Remove button padding in FF*/
     /* border-left: #fffff9 solid 2px; */
     /* border-bottom: #504b46 solid 2px; */
     /* border-right: #504b46 solid 2px; */
-	box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px grey, inset 2px 2px #fff;
+    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px grey, inset 2px 2px #fff;
 }
 
 .ui-dialog.ui-draggable-disabled.ui-resizable-disabled {
     box-shadow: none;
     width: 100%!important;
-	height: -moz-calc(100% - 30px)!important;
-	height: -webkit-calc(100% - 30px)!important;
-	height: calc(100% - 30px)!important;
+    height: -moz-calc(100% - 29px)!important;
+    height: -webkit-calc(100% - 29px)!important;
+    height: calc(100% - 29px)!important;
 }
 
-.ui-draggable-disabled.ui-resizable-disabled .ui-dialog-content{
-	width: 100%!important;
-	height: -moz-calc(100% - 20px)!important;
-	height: -webkit-calc(100% - 20px)!important;
-	height: calc(100% - 20px)!important;
+.ui-draggable-disabled.ui-resizable-disabled .ui-dialog-content {
+    width: 100%!important;
+    height: -moz-calc(100% - 20px)!important;
+    height: -webkit-calc(100% - 20px)!important;
+    height: calc(100% - 20px)!important;
 }
 
 .ui-dialog-titlebar {
     color: #ffffff;
-	/* margin: 3px; */
+    /* margin: 3px; */
     padding: 1px 0 1px 2px !important;
     line-height: 16px;
     height: 16px;
     cursor: pointer;
     font-weight: bold;
-    background: #818084; /* Old browsers */
-    background: -moz-linear-gradient(left, #818084 0%, #c6c5c3 100%, #c6c5c3 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#818084), color-stop(100%,#c6c5c3), color-stop(100%,#c6c5c3)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(left, #818084 0%,#c6c5c3 100%,#c6c5c3 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(left, #818084 0%,#c6c5c3 100%,#c6c5c3 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(left, #818084 0%,#c6c5c3 100%,#c6c5c3 100%); /* IE10+ */
-    background: linear-gradient(to right, #818084 0%,#c6c5c3 100%,#c6c5c3 100%); /* W3C */
+    background: #818084;
+    /* Old browsers */
+    background: -moz-linear-gradient(left, #818084 0%, #c6c5c3 100%, #c6c5c3 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, #818084), color-stop(100%, #c6c5c3), color-stop(100%, #c6c5c3));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, #818084 0%, #c6c5c3 100%, #c6c5c3 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, #818084 0%, #c6c5c3 100%, #c6c5c3 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, #818084 0%, #c6c5c3 100%, #c6c5c3 100%);
+    /* IE10+ */
+    background: linear-gradient(to right, #818084 0%, #c6c5c3 100%, #c6c5c3 100%);
+    /* W3C */
 }
 
 div.lwd-window-focus .ui-dialog-titlebar {
-    background: #0b256b; /* Old browsers */
-    background: -moz-linear-gradient(left, #0b256b 0%, #a3c8ef 100%, #7db9e8 100%) !important; /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#0b256b), color-stop(100%,#a3c8ef), color-stop(100%,#7db9e8)) !important; /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(left, #0b256b 0%,#a3c8ef 100%,#7db9e8 100%) !important; /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(left, #0b256b 0%,#a3c8ef 100%,#7db9e8 100%) !important; /* Opera 11.10+ */
-    background: -ms-linear-gradient(left, #0b256b 0%,#a3c8ef 100%,#7db9e8 100%) !important; /* IE10+ */
-    background: linear-gradient(to right, #0b256b 0%,#a3c8ef 100%,#7db9e8 100%) !important; /* W3C */
+    background: #0b256b;
+    /* Old browsers */
+    background: -moz-linear-gradient(left, #0b256b 0%, #a3c8ef 100%, #7db9e8 100%) !important;
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, #0b256b), color-stop(100%, #a3c8ef), color-stop(100%, #7db9e8)) !important;
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, #0b256b 0%, #a3c8ef 100%, #7db9e8 100%) !important;
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, #0b256b 0%, #a3c8ef 100%, #7db9e8 100%) !important;
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, #0b256b 0%, #a3c8ef 100%, #7db9e8 100%) !important;
+    /* IE10+ */
+    background: linear-gradient(to right, #0b256b 0%, #a3c8ef 100%, #7db9e8 100%) !important;
+    /* W3C */
 }
 
 .ui-dialog-title {
@@ -130,7 +157,6 @@ div.lwd-window-focus .ui-dialog-titlebar {
     padding: 0 0 0 2px !important;
 }
 
-
 td.titlebar-middle {
     height: 100%;
     color: #E9E7E5;
@@ -138,17 +164,17 @@ td.titlebar-middle {
     padding: 0 0 0 2px !important;
     overflow: hidden;
     line-height: 16px !important;
-	width: -moz-calc(100% - 60px);
-	width: -webkit-calc(100% - 60px);
-	width: calc(100% - 60px);
-	text-overflow: ellipsis;
+    width: -moz-calc(100% - 60px);
+    width: -webkit-calc(100% - 60px);
+    width: calc(100% - 60px);
+    text-overflow: ellipsis;
     white-space: nowrap;
-	min-width: 0;
+    min-width: 0;
     max-width: 100%;
-	display: inline-block;
-	font-size: 16px;
+    display: inline-block;
+    font-size: 16px;
     font-weight: normal;
-	text-shadow: -1px 0;
+    text-shadow: -1px 0;
     letter-spacing: 1px;
     vertical-align: top;
 }
@@ -157,7 +183,7 @@ div.lwd-window-focus td.titlebar-middle {
     color: #FFFFFF;
 }
 
-td.titlebar-left{
+td.titlebar-left {
     height: 100%;
     min-width: 18px;
     text-align: left;
@@ -166,20 +192,19 @@ td.titlebar-left{
     width: 20px;
 }
 
-td.titlebar-right{
+td.titlebar-right {
     height: 100%;
     min-width: 60px;
     text-align: right;
     vertical-align: middle;
     max-width: 60px;
     width: 60px;
-	position: absolute;
+    position: absolute;
     right: 0;
     top: 0;
-	margin-top: 1px!important;
-	line-height: 0px;
+    margin-top: 1px!important;
+    line-height: 0px;
 }
-
 
 div#taskbar {
     background: #d4d0c8;
@@ -187,12 +212,12 @@ div#taskbar {
     bottom: 0;
     overflow: hidden;
     width: 100%;
-	min-height: 27px!important;
+    min-height: 27px!important;
     height: 27px;
     border-top: #FFFFFF solid 1px;
-	-webkit-box-shadow: 0px -1px 0px 0px #D6D6CE;
-	-moz-box-shadow: 0px -1px 0px 0px #D6D6CE;
-	box-shadow: 0px -1px 0px 0px #D6D6CE;
+    -webkit-box-shadow: 0px -1px 0px 0px #D6D6CE;
+    -moz-box-shadow: 0px -1px 0px 0px #D6D6CE;
+    box-shadow: 0px -1px 0px 0px #D6D6CE;
     z-index: 99999;
     padding: 0 !important;
 }
@@ -202,42 +227,46 @@ div#taskbar button {
     float: left;
     cursor: pointer;
     background-color: #d4d0c8;
-    height: 20px;
+    height: 18px;
     min-width: 0;
     padding: 1px 5px 2px 3px;
     /* margin: 0 !important; */
-	border: none;
+    border: none;
     font-family: 'TahomaPX', Tahoma, Geneva, sans-serif;
     font-weight: normal !important;
     font-size: 16px !important;
 }
 
-div#taskbar button:active, div#taskbar>button.lwd-taskbar-button-focus {
+div#taskbar button:active,
+div#taskbar>button.lwd-taskbar-button-focus {
     padding: 2px 5px 2px 3px !important;
     background-color: #e9e7e5 !important;
-	border: none;
+    border: none;
     outline: none;
 }
 
-
-
 div#lwd-taskbar-information_container {
-   display: inline-block;
-    height: 14px;
+    display: inline-block;
+    height: 21px;
+    line-height: 18px;
     margin: 2px;
-    padding: 3px;
+    padding: 0px;
+    right: 0px;
+    position: absolute;
 }
 
 div#lwd-taskbar-button-container {
+    width: calc(100% - 165px)!important;
     max-height: 28px;
     overflow-x: hidden;
     overflow-y: hidden;
-	margin-top: 0;
+    margin-top: 0;
 }
+
 
 /*taskbar container*/
 
-div#lwd-taskbar-button-container > button{
+div#lwd-taskbar-button-container>button {
     display: block;
     float: left;
     cursor: pointer;
@@ -246,17 +275,19 @@ div#lwd-taskbar-button-container > button{
     min-width: 70px;
     padding: 1px 5px 2px 3px;
     margin: 2px 0px 2px 1px !important;
-	border: none;
+    border: none;
     font-weight: normal !important;
-	background-image: url(images/open_button.png)!important;
+    background-image: url(images/open_button.png)!important;
     background-position: 0px -3px;
-	width: 162px;
+    width: 162px;
 }
 
-div#lwd-taskbar-button-container > button:active, div#lwd-taskbar-button-container > button.lwd-taskbar-button-focus, div#lwd-taskbar-button-container > button.ui-state-hover  {
+div#lwd-taskbar-button-container>button:active,
+div#lwd-taskbar-button-container>button.lwd-taskbar-button-focus,
+div#lwd-taskbar-button-container>button.ui-state-hover {
     background-color: #e9e7e5 !important;
-	border: none;
-	background-position: 0px -57px;
+    border: none;
+    background-position: 0px -57px;
     outline: none;
 }
 
@@ -274,12 +305,12 @@ div#lwd-taskbar-button-container > button:active, div#lwd-taskbar-button-contain
 .lwd-taskbar-button-title {
     margin: 2px 0 0 2px !important;
     padding: 0 0 0 2px;
-	font-family: 'TahomaPX', Tahoma, Geneva, sans-serif;
+    font-family: 'TahomaPX', Tahoma, Geneva, sans-serif;
     font-weight: normal !important;
     font-size: 16px !important;
     line-height: 16px;
     height: 17px;
-	display: inline-block;
+    display: inline-block;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -295,22 +326,22 @@ div#lwd-taskbar-button-container > button:active, div#lwd-taskbar-button-contain
     border: 0 !important;
 }
 
-.ui-icon-maximizethick{
+.ui-icon-maximizethick {
     background-position: -18px 0 !important;
     margin: -10px -10px !important;
 }
 
-.ui-icon-minimizethick{
+.ui-icon-minimizethick {
     background-position: -36px 0 !important;
     margin: -10px -8px !important;
 }
 
-.ui-icon-closethick{
+.ui-icon-closethick {
     background-position: 0 0;
     margin: -10px -10px !important;
 }
 
-.ui-icon-restorethick{
+.ui-icon-restorethick {
     background-position: -54px 0 !important;
     margin: -10px -10px !important;
 }
@@ -342,12 +373,12 @@ div#lwd-taskbar-button-container > button:active, div#lwd-taskbar-button-contain
     height: 18px !important;
 }
 
-div#lwd-taskbar-information_container>div{
+div#lwd-taskbar-information_container>div {
     display: inline-block !important;
     vertical-align: middle;
 }
 
-table.taskbar{
+table.taskbar {
     padding: 0 !important;
 }
 
@@ -365,9 +396,9 @@ td.taskbar-right {
     text-align: right;
 }
 
-#lwd-taskbar-information_container{
+#lwd-taskbar-information_container {
     display: block;
-    float:right;
+    float: right;
     margin: 0;
     border-top: #3d3e40 solid 1px !important;
     border-left: #3d3e40 solid 1px !important;
@@ -376,9 +407,7 @@ td.taskbar-right {
     padding: 0 4px 0 4px;
 }
 
-#lwd-taskbar-info {
-
-}
+#lwd-taskbar-info {}
 
 #lwd-taskbar-clock {
     float: right;
@@ -392,7 +421,7 @@ td.taskbar-right {
     margin: 2px 4px 0 0;
 }
 
-#lwd-taskbar-left{
+#lwd-taskbar-left {
     display: block;
     float: left;
 }
@@ -402,7 +431,7 @@ td.taskbar-right {
     display: block !important;
 }
 
-#lwd-taskbar-button-navigation{
+#lwd-taskbar-button-navigation {
     display: none;
     float: left;
     margin: 0;

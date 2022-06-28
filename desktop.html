@@ -1,147 +1,182 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        <title>LWD Desktop</title>
 
-        <link href="lib/jquery-ui/jquery-ui.structure.min.css" rel="stylesheet" type="text/css" />
-        <link id="themecss" href="src/jquery-lwd/themes/windows2000/jquery-ui.theme.css" rel="stylesheet" type="text/css" />
-        <link href="src/jquery-lwd/jquery-lwd.structure.css" rel="stylesheet" type="text/css" />
-		
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>LWD Desktop</title>
 
-        <script type="text/javascript" src="lib/jquery-ui/jquery.min.js"></script>
-        <script type="text/javascript" src="lib/jquery-ui/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="src/jquery-lwd/jquery-lwd.js"></script>
-        <script type="text/javascript" src="lib/jquery.ui.touch-punch.min.js"></script>
-    </head>
+    <link href="lib/jquery-ui/jquery-ui.structure.min.css" rel="stylesheet" type="text/css" />
+    <link id="themecss" href="src/jquery-lwd/themes/windows2000/jquery-ui.theme.css" rel="stylesheet" type="text/css" />
+    <link href="src/jquery-lwd/jquery-lwd.structure.css" rel="stylesheet" type="text/css" />
 
-    <body>
-	
-			<div id="startmenu" class="startmenu" style="display:none;">
-				<ul>
-					<li id="newYoutubeWindowButton" OnClick="alert('Alert')">Alert</li>
-					<li id="newHtmlWindowButton" OnClick="thisds()">Open1</li>
-					<li id="newWindowButton" OnClick="openTunes()">Open2</li>
-				</ul>
-			</div>
+    <script type="text/javascript" src="lib/jquery-ui/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/jquery-ui/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="src/jquery-lwd/jquery-lwd.js"></script>
+    <script type="text/javascript" src="lib/jquery.ui.touch-punch.min.js"></script>
+</head>
+
+<body>
+    <div class="screen-env">
+<div class="stcre" id="stcre" style="display:none;">
+        <div id="startmenu" class="startmenu">
+            <ul>
+                <li id="newYoutubeWindowButton" OnClick="alert('Alert')">Alert</li>
+                <li id="newHtmlWindowButton" OnClick="thisds()">Open1</li>
+                <li id="newWindowButton" OnClick="openTunes()">Open2</li>
+                <li id="newWindowButton" OnClick="openCalc()">Open3</li>
+            </ul>
+        </div>
+		</div>
         <div id="taskbar">
             <div id="lwd-taskbar-left" style="display: inline-block">
-			
-			<button id="startbutton" class="wind-button ui-button lwd-taskbar-button ui-state-default ui-corner-all">Start</button>
+
+                <button id="startbutton" class="wind-button ui-button lwd-taskbar-button ui-state-default ui-corner-all">Start</button>
                 <button id="addbutton" class="wind-button ui-button lwd-taskbar-button ui-state-default ui-corner-all">Add window</button>
-                
-				<div class="taskbar-spacer"></div>
+
+                <div class="taskbar-spacer"></div>
             </div>
         </div>
 
-        <label for="theme">Theme:</label>
-        <select id="theme">
+        <div id="desktop">
+            <label for="theme">Theme:</label>
+            <select id="theme">
             <option value="">--- please choose</option>
             <option value="src/jquery-lwd/themes/windows2000/jquery-ui.theme.css">Windows 2000</option>
 			<option value="src/jquery-lwd/themes/powerpuff-pink/jquery-ui.theme.css">The PPG</option>
             <option value="src/jquery-lwd/themes/material/jquery-ui.theme.css">Material</option>
             <option value="src/jquery-lwd/themes/pink-vista/jquery-ui.theme.css">Vista PPG</option>
-            <option value="src/jquery-lwd/themes/jquery-ui-base/jquery-ui.theme.css">unknown</option>
+            <option value="src/jquery-lwd/themes/base-ui/jquery-ui.theme.css">unknown</option>
         </select>
-    </body>
+        </div>
+    </div>
+</body>
 
-    <script>
-        $(document).ready(function () {
-            var intCounter = 1;
+<script>
+    $(document).ready(function() {
+        var intCounter = 1;
 
-            $('#addbutton').click(function () {
-                var $objWindow = $('<div class="window"><div class="fit-conte">Window '+intCounter+'</div></div>');
-                var intRandom = Math.floor((Math.random() * 12) + 1);
-                $($objWindow).appendTo('body');
-                $objWindow.window({
-                    title: 'My awesome custom window '+intCounter,
-                    width: 480,
-                    height: 320,
-                    position: {
-                        my: 'left+'+200+', top+'+200,
-                        at: 'left top',
-                        of: window
-                    },
-                    maximizable: true,
-                    minimizable: true,
+        $('#addbutton').click(function() {
+            var $objWindow = $('<div class="window"><div class="fit-conte">Window ' + intCounter + '</div></div>');
+            var intRandom = Math.floor((Math.random() * 12) + 1);
+            $($objWindow).appendTo('body');
+            $objWindow.window({
+                title: 'My awesome custom window ' + intCounter,
+                width: 480,
+                height: 320,
+                position: {
+                    my: 'left+' + 200 + ', top+' + 200,
+                    at: 'left top',
+                    of: window
+                },
+                maximizable: true,
+                minimizable: true,
 
-                    //icon: 'src/jquery-lwd/themes/windows2000/images/default.png'
-                    icon: 'src/jquery-lwd/themes/windows2000/images/icons/'+intRandom+'.png'
-                });
-
-                intCounter++;
+                //icon: 'src/jquery-lwd/themes/windows2000/images/default.png'
+                icon: 'src/jquery-lwd/themes/windows2000/images/icons/' + intRandom + '.png'
             });
 
-            $('#taskbar').taskbar();
-
-            $('#theme').change(function () {
-                $("head link#themecss").attr("href", $(this).val());
-            });
+            intCounter++;
         });
-		
-function thisds() {
-  var $objWindow = $('<div class="window"><div class="fit-conte">dkadaksdjsa</div></div>');
-  $($objWindow).appendTo('body');
-  $objWindow.window({
-    title: 'My awesome custom wi',
-    width: 480,
-    height: 320,
-    position: {
-      my: 'left+' + 200 + ', top+' + 200,
-      at: 'left top',
-      of: window
-    },
-    maximizable: true,
-    minimizable: true,
-    icon: 'src/jquery-lwd/themes/windows2000/images/default.png'
-  });
 
-};
+        $('#taskbar').taskbar();
 
-function openTunes() {
-  var $objWindow = $('<div class="window"><iframe class="fit-iframe" src="programs/tunes/index.html"></iframe></div>');
-  $($objWindow).appendTo('body');
-  $objWindow.window({
-    title: 'My awesome custom wi',
-    width: 480,
-    height: 200,
-    position: {
-      my: 'left+' + 200 + ', top+' + 200,
-      at: 'left top',
-      of: window
-    },
-    maximizable: true,
-    minimizable: true,
-    icon: 'src/jquery-lwd/themes/windows2000/images/default.png'
-  });
+        $('#theme').change(function() {
+            $("head link#themecss").attr("href", $(this).val());
+        });
+    });
 
-};
+    function thisds() {
+        var $objWindow = $('<div class="window"><div class="fit-conte">dkadaksdjsa</div></div>');
+        $($objWindow).appendTo('body');
+        $objWindow.window({
+            title: 'My awesome custom wi',
+            width: 480,
+            height: 320,
+            position: {
+                my: 'left+' + 200 + ', top+' + 200,
+                at: 'left top',
+                of: window
+            },
+            maximizable: true,
+            minimizable: true,
+            icon: 'src/jquery-lwd/themes/windows2000/images/default.png'
+        });
 
-$('#startbutton').on('click',function(){
-	var strtm1 = document.getElementById("startmenu");
-  if (strtm1.style.display === "block") {
-    strtm1.style.display = "none";
-  } else {
-    strtm1.style.display = "block";
-  }
-});
-$('.startmenu li').on('click',function(){
-		$('.startmenu').css({
-			"display":"none"
-});
-});
-    </script>
-	<style>
-	.startmenu{
-	position: absolute;
-    bottom: 29px;
-    background-color: white;
-    padding: 5px;
-	}
-	.startmenu li:hover{
-	background: blue;
-	color: white;
-	}
-	</style>
+    };
+
+    function openTunes() {
+        var $objWindow = $('<div class="window"><iframe class="fit-iframe" src="iframe.html"></iframe></div>');
+        $($objWindow).appendTo('body');
+        $objWindow.window({
+            title: 'My awesome custom wi',
+            width: 480,
+            height: 200,
+            position: {
+                my: 'left+' + 200 + ', top+' + 200,
+                at: 'left top',
+                of: window
+            },
+            maximizable: true,
+            minimizable: true,
+            icon: 'src/jquery-lwd/themes/windows2000/images/default.png'
+        });
+
+    };
+
+    function openCalc() {
+        var $objWindow = $('<div class="window"><iframe class="fit-iframe" src="programs/tunes/index.html"></iframe></div>');
+        $($objWindow).appendTo('body');
+        $objWindow.window({
+            title: 'My awesome custom wi',
+            width: 480,
+            height: 200,
+            position: {
+                my: 'left+' + 200 + ', top+' + 200,
+                at: 'left top',
+                of: window
+            },
+            maximizable: true,
+            minimizable: true,
+            icon: 'src/jquery-lwd/themes/windows2000/images/default.png'
+        });
+
+    };
+
+    $('#startbutton').on('click', function() {
+        var strtm1 = document.getElementById("stcre");
+        if (strtm1.style.display === "none") {
+            strtm1.style.display = "block";
+        } else {
+            strtm1.style.display = "none";
+        }
+    });
+    //if click menu
+    $('.startmenu li, .stcre').on('click drag size', function() {
+	console.log("Hello world!");
+        $('.stcre').css({
+            "display": "none"
+        });
+    });
+</script>
+<style>
+.stcre{
+position:absolute;width:100%;height:100%;z-index: 9999999999999999999999;
+}
+    .startmenu {
+        position: absolute;
+        bottom: 29px;
+        background-color: white;
+        padding: 5px;
+    }
+    
+    .startmenu li:hover {
+        background: blue;
+        color: white;
+    }
+    
+    div#desktop {
+        height: 100%;
+    }
+</style>
 
 </html>
